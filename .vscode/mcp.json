@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "raumnebenan": {
+      "type": "http",
+      "url": "https://www.raumnebenan.de/mcp",
+      "version": "0.2.5"
+    }
+  }
+}

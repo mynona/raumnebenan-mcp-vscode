@@ -1,7 +1,7 @@
 {
   "name": "raumnebenan-mcp-vscode",
   "displayName": "raumnebenan - product thinking (MCP)",
-  "description": "raumnebenan.de MCP Server for actionable product thinking. Provides structured guides and tools for product owners and designers.",
+  "description": "official raumnebenan.de MCP Server for actionable product thinking. Implements the Model Context Protocol (MCP) to provide structured guides and tools for product owners and designers directly in VS Code Chat and AI features.",
   "version": "0.2.5",
   "license": "MIT",
   "publisher": "raumnebenan",
@@ -15,7 +15,8 @@
   },
   "categories": [
     "AI",
-    "Chat"
+    "Chat",
+    "Programming Languages"
   ],
   "keywords": [
     "mcp",
@@ -29,11 +30,17 @@
     "mcpToolDefinitions"
   ],
   "activationEvents": [
+    "onStartupFinished",
     "onMcpServerDefinitionProvider:raumnebenan.mcp-server"
   ],
-  "mcp": "server.json",
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "raumnebenan-mcp.installServer",
+        "title": "raumnebenan: Install MCP Server to mcp.json"
+      }
+    ],
     "mcpServerDefinitionProviders": [
       {
         "id": "raumnebenan.mcp-server",
