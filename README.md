@@ -5,6 +5,4 @@
 ## Features
 
 - **MCP Server**: Provides the raumnebenan MCP server to VS Code's built-in MCP discovery system.
-- **ProductPartner Agent**: A specialized AI agent to guide you through the Sense, Focus, Discovery, and Delivery framework.
-- **Product Thinking Skill**: Integrated instructions that help Copilot understand and apply raumnebenan principles.
 
