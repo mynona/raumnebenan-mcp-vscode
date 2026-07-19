@@ -2,7 +2,7 @@
   "name": "raumnebenan-mcp-vscode",
   "displayName": "raumnebenan-mcp",
   "description": "raumnebenan.de is a resource hub focused on actionable product thinking for product owners, product designers, business analysts, product managers, agile coaches, and user researchers. The site provides clear, structured guides and tools to help teams understand users, identify opportunities, validate ideas, and deliver products that create real user and business value.",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "license": "MIT",
   "publisher": "raumnebenan",
   "icon": "images/raumnebenan.png",
@@ -20,30 +20,21 @@
   "keywords": [
     "mcp",
     "mcp-server",
-    "product thinking",
-    "product vision",
-    "product strategy",
-    "product roadmap",
-    "usability",
-    "design thinking",
-    "design sprint",
-    "user research",
-    "prioritization",
-    "agile development",
-    "co-creation workshop"
+    "language-model-tools",
+    "product thinking"
   ],
   "enabledApiProposals": [
     "mcpServerDefinitions"
   ],
   "activationEvents": [
-    "onLanguageModelMcpServerDefinitionProvider:raumnebenan-mcp"
+    "onLanguageModelMcpServerDefinitionProvider:raumnebenan.mcp-server"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "mcpServerDefinitionProviders": [
       {
-        "id": "raumnebenan-mcp",
-        "label": "raumnebenan-mcp"
+        "id": "raumnebenan.mcp-server",
+        "label": "raumnebenan"
       }
     ]
   },
