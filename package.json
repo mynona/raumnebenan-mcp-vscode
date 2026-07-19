@@ -1,8 +1,8 @@
 {
   "name": "raumnebenan-mcp-vscode",
-  "displayName": "raumnebenan - product thinking (MCP)",
-  "description": "official raumnebenan.de MCP Server for actionable product thinking. Implements the Model Context Protocol (MCP) to provide structured guides and tools for product owners and designers directly in VS Code Chat and AI features.",
-  "version": "0.2.5",
+  "displayName": "raumnebenan - product thinking",
+  "description": "raumnebenan.de is a resource hub focused on actionable product thinking for product owners, product designers, business analysts, product managers, agile coaches, and user researchers. The site provides clear, structured guides and tools to help teams understand users, identify opportunities, validate ideas, and deliver products that create real user and business value.",
+  "version": "0.2.9",
   "license": "MIT",
   "publisher": "raumnebenan",
   "icon": "images/raumnebenan.png",
@@ -10,14 +10,15 @@
     "type": "git",
     "url": "https://github.com/mynona/raumnebenan-mcp-vscode.git"
   },
+
   "engines": {
     "vscode": "^1.95.0"
   },
-  "categories": [
-    "AI",
-    "Chat",
-    "Programming Languages"
-  ],
+
+  "extensionKind": ["workspace"],
+
+  "categories": ["AI", "Chat"],
+
   "keywords": [
     "mcp",
     "mcp-server",
@@ -25,22 +26,20 @@
     "language-model-tools",
     "product thinking"
   ],
+
   "enabledApiProposals": [
     "mcpServerDefinitions",
     "mcpToolDefinitions"
   ],
+
   "activationEvents": [
-    "onStartupFinished",
-    "onMcpServerDefinitionProvider:raumnebenan.mcp-server"
+    "onLanguageModelTools",
+    "onLanguageModelChat"
   ],
+
   "main": "./out/extension.js",
+
   "contributes": {
-    "commands": [
-      {
-        "command": "raumnebenan-mcp.installServer",
-        "title": "raumnebenan: Install MCP Server to mcp.json"
-      }
-    ],
     "mcpServerDefinitionProviders": [
       {
         "id": "raumnebenan.mcp-server",
@@ -48,6 +47,7 @@
       }
     ]
   },
+
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
@@ -56,6 +56,7 @@
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js"
   },
+
   "devDependencies": {
     "@types/node": "^20.19.43",
     "@types/vscode": "^1.95.0",
