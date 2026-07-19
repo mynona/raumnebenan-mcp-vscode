@@ -1,0 +1,6 @@
+publishing-info.md
+.vscode
+src
+tsconfig.json
+.gitignore
+.eslintrc.json
