@@ -2,7 +2,7 @@
   "name": "raumnebenan-mcp-vscode",
   "displayName": "raumnebenan - product thinking (MCP)",
   "description": "raumnebenan.de MCP Server for actionable product thinking. Provides structured guides and tools for product owners and designers.",
-  "version": "0.2.1",
+  "version": "0.2.5",
   "license": "MIT",
   "publisher": "raumnebenan",
   "icon": "images/raumnebenan.png",
@@ -25,11 +25,13 @@
     "product thinking"
   ],
   "enabledApiProposals": [
-    "mcpServerDefinitions"
+    "mcpServerDefinitions",
+    "mcpToolDefinitions"
   ],
   "activationEvents": [
-    "onLanguageModelMcpServerDefinitionProvider:raumnebenan.mcp-server"
+    "onMcpServerDefinitionProvider:raumnebenan.mcp-server"
   ],
+  "mcp": "server.json",
   "main": "./out/extension.js",
   "contributes": {
     "mcpServerDefinitionProviders": [

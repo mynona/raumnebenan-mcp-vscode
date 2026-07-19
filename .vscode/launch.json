@@ -7,7 +7,8 @@
             "request": "launch",
             "runtimeExecutable": "${execPath}",
             "args": [
-                "--extensionDevelopmentPath=${workspaceFolder}"
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--enable-proposed-api=raumnebenan.raumnebenan-mcp-vscode"
             ],
             "outFiles": [
                 "${workspaceFolder}/out/**/*.js"
