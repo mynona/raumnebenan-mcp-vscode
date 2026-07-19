@@ -5,12 +5,12 @@ export function activate(context: vscode.ExtensionContext) {
 
     context.subscriptions.push(
         vscode.lm.registerMcpServerDefinitionProvider('raumnebenan.mcp-server', {
-            provideMcpServerDefinitions: async () => [
+            provideMcpServerDefinitions: (_token: vscode.CancellationToken) => [
                 new vscode.McpHttpServerDefinition(
                     'raumnebenan',
                     vscode.Uri.parse('https://www.raumnebenan.de/mcp'),
                     {},
-                    '0.1.9'
+                    '0.2.1'
                 )
             ]
         })

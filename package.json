@@ -1,8 +1,8 @@
 {
   "name": "raumnebenan-mcp-vscode",
-  "displayName": "raumnebenan - product thinking",
-  "description": "raumnebenan.de is a resource hub focused on actionable product thinking for product owners, product designers, business analysts, product managers, agile coaches, and user researchers. The site provides clear, structured guides and tools to help teams understand users, identify opportunities, validate ideas, and deliver products that create real user and business value.",
-  "version": "0.1.9",
+  "displayName": "raumnebenan - product thinking (MCP)",
+  "description": "raumnebenan.de MCP Server for actionable product thinking. Provides structured guides and tools for product owners and designers.",
+  "version": "0.2.1",
   "license": "MIT",
   "publisher": "raumnebenan",
   "icon": "images/raumnebenan.png",
@@ -11,7 +11,7 @@
     "url": "https://github.com/mynona/raumnebenan-mcp-vscode.git"
   },
   "engines": {
-    "vscode": "^1.90.0"
+    "vscode": "^1.95.0"
   },
   "categories": [
     "AI",
@@ -20,6 +20,7 @@
   "keywords": [
     "mcp",
     "mcp-server",
+    "model-context-protocol",
     "language-model-tools",
     "product thinking"
   ],
@@ -47,8 +48,8 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.90.0",
-    "@types/node": "20.x",
+    "@types/node": "^20.19.43",
+    "@types/vscode": "^1.95.0",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.14.1",
     "eslint": "^8.57.0",
